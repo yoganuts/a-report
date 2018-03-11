@@ -14,4 +14,7 @@ export default handleActions({
       {id: 2, content: 'bad news', user: { username: 'bar' }},
     ]
   }),
+  START_CREATE_REPORT: (state, action) => ({
+    reports: state.reports.concat({id: state.reports.length + 1, content: 'add reports', user: { username: 'baz' }})
+  }),
 }, initialState)

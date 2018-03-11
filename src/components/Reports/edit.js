@@ -1,5 +1,5 @@
 import React from 'react'
-import ReportForm from './form'
+import ReportForm from '../../containers/Reports/form'
 
 export default function ReportEdit(props) {
   return (

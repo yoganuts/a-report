@@ -17,9 +17,9 @@ class App extends Component {
         <Header />
         <h1>a-report</h1>
         <Route exact path="/" component={Home} />
-        <Route exact path="/reports" component={Reports} />
         <Route path="/reports/new" component={ReportNew} />
         <Route path="/reports/:id/edit" component={ReportEdit} />
+        <Route path="/reports" component={Reports} />
         <Footer />
       </div>
     )
