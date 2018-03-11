@@ -1,18 +1,20 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import Button from 'material-ui/Button'
+import Input from 'material-ui/Input'
 
 export default function LoginForm(props) {
   return (
     <div>
       {props.user.uid ? (
         <Fragment>
-          {props.user.uid}<button onClick={props.logout}>Logout</button>
+          {props.user.uid}<Button variant="raised" color="secondary" onClick={props.logout}>Logout</Button>
         </Fragment>
       ) : (
         <Fragment>
-          <input type="text" name="username" />
-          <input type="password" name="password" />
-          <button onClick={props.login}>Login</button>
+          <Input type="text" name="username" placeholder="username" />
+          <Input type="password" name="password" placeholder="password" />
+          <Button variant="raised" color="secondary" onClick={props.login}>Login</Button>
         </Fragment>
       )}
     </div>

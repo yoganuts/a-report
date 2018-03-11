@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
+import Reboot from 'material-ui/Reboot'
 
 import Home from './components/Home'
 import Header from './components/Header'
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Reboot />
         <Header />
         <h1>a-report</h1>
         <Route exact path="/" component={Home} />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import Button from 'material-ui/Button'
 
 import ReportItem from '../ReportItem'
 
@@ -12,7 +13,7 @@ export default class Reports extends Component {
 //    this.props.onUpdate()
   }
   render() {
-    const editButton = this.props.user.uid && <Link to="/reports/new">new</Link>
+    const editButton = this.props.user.uid && <Button component={Link} to="/reports/new" variant="raised">new</Button>
 
     return (
       <div>

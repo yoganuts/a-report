@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Card, { CardContent } from 'material-ui/Card'
 
 export default function ReportItem(props) {
   return (
     <div>
-      <p>{props.report.user.username}</p>
-      <pre>{props.report.content}</pre>
+      <Card>
+        <CardContent>
+          <p>{props.report.user.username}</p>
+          <pre>{props.report.content}</pre>
+        </CardContent>
+      </Card>
     </div>
   )
 }
